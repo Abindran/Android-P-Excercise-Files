@@ -3,6 +3,7 @@ package com.example.myapihandler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
 
-        requestQueue = Volley.newRequestQueue(this);
-        requestQueue.start();
+//        requestQueue = Volley.newRequestQueue(this);
+        requestQueue =  VolleySingleton.getInstance(this).getRequestQueue();
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                textView.setText("hi");
+//                textView.setText("hi");
                 sendAPIRequest();
             }
         });
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                textView.setText("king");
                 try {
                     JSONArray jsonArray = response.getJSONArray("students");
                     for(int i=0;i<jsonArray.length();i++){
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 textView.setText("That didn't work");
+
             }
         });
 
