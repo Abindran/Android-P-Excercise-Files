@@ -1,0 +1,29 @@
+{
+  "students": [
+    {
+      "courseCount": 4,
+      "email": "hitesh@hiteshChoudary.com",
+      "name": "Hitesh"
+    },
+    {
+      "courseCount": 3,
+      "email": "shubham@example.com",
+      "name": "Shubham"
+    },
+    {
+      "courseCount": 2,
+      "email": "harry@email.com",
+      "name": "Harry"
+    },
+    {
+      "courseCount": 5,
+      "email": "mike@example.com",
+      "name": "Mike"
+    },
+    {
+      "courseCount": 3,
+      "email": "annie@example.com",
+      "name": "Annie"
+    }
+  ]
+}

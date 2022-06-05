@@ -1,0 +1,27 @@
+{
+  "courseCount": 11,
+  "email": "abindran@lco.in",
+  "course": {
+    "description": "Bootcamp",
+    "name": "Java"
+  },
+  "video": [
+    {
+      "duration": 4,
+      "name": "Intro"
+    },
+    {
+      "duration": 6,
+      "name": "Exercise files"
+    },
+    {
+      "duration": 14,
+      "name": "Installation"
+    },
+    {
+      "duration": 24,
+      "name": "Explanation"
+    }
+  ],
+  "name": "Abindran"
+}
